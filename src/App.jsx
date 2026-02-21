@@ -6,9 +6,11 @@ import Work from "./components/work/Work";
 import Services from "./components/services/Services";
 import Resume from "./components/page/Page";
 import Contact from "./components/contact/Contact";
+import { Analytics } from "@vercel/analytics/next";
 
 const App = () => (
   <HashRouter>
+    <Analytics />
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />

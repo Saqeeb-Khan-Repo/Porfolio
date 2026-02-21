@@ -2,8 +2,6 @@ import { useState } from "react";
 import { FaArrowUpRightFromSquare, FaSquareGithub } from "react-icons/fa6";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 
-
-
 const Work = () => {
   const details = [
     {
@@ -70,7 +68,6 @@ const Work = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const current = details[currentIndex];
-
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? details.length - 1 : prev - 1));
@@ -158,6 +155,7 @@ const Work = () => {
                 src={current.img}
                 alt={current.name}
                 className="h-full w-full object-cover"
+                loading="lazy"
               />
             ) : (
               <div className="flex h-full w-full items-center justify-center text-sm text-slate-500">
