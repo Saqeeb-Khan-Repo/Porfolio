@@ -44,7 +44,7 @@ const Work = () => {
       skill: "React.js, Tailwind CSS",
       link: "https://nykaa-pearl.vercel.app/#",
       github: "https://github.com/Saqeeb-Khan-Repo/NYKAA",
-      img: "/nykaa.png",
+      img: "/nykaa (1).png",
     },
     {
       nums: "05",
@@ -64,13 +64,13 @@ const Work = () => {
       skill: "React.js, Rapid API",
       link: "https://tubeplex.netlify.app/",
       github: "https://github.com/Saqeeb-Khan-Repo/Youtube",
-      img: "/youtube.png",
+      img: "/yt.png",
     },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const current = details[currentIndex];
-  
+
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? details.length - 1 : prev - 1));
