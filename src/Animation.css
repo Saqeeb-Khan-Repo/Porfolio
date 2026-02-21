@@ -1,0 +1,34 @@
+.typing {
+  display: inline-block;
+  animation:
+    type 4s steps(22, end) forwards ,
+    blink 0.9s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid currentColor;
+  font-family: monospace;
+  letter-spacing: 5px;
+  
+}
+
+/* typing */
+@keyframes type {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; /* match visible characters */
+  }
+}
+
+/* caret blink */
+@keyframes blink {
+  0%,
+  50% {
+    border-color: currentColor;
+  }
+  50.1%,
+  100% {
+    border-color: transparent;
+  }
+}
