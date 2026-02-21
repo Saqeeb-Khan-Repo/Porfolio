@@ -1,6 +1,6 @@
 // Layout.jsx
 import Header from "./components/navigation/Header";
-import Footer from "./Components/Footer";
+import Footer from "./components/Footer";
 import { Outlet, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import PageTransition from "./components/page/PageTransition";
