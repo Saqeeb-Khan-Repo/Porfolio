@@ -3,7 +3,7 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import Home from "./components/home/Home";
 import Work from "./components/work/Work";
-import Services from "./components/services/services";
+import Services from "./components/services/Services";
 import Resume from "./components/page/Page";
 import Contact from "./components/contact/Contact";
 
