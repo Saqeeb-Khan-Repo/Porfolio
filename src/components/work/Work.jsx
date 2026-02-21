@@ -70,6 +70,7 @@ const Work = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const current = details[currentIndex];
+  
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? details.length - 1 : prev - 1));
