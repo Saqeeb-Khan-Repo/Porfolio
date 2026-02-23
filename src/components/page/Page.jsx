@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Resume = () => {
   const [showPreview, setShowPreview] = useState(false);
-const pdfUrl = `${import.meta.env.BASE_URL}/MYCV.pdf`;
+  const pdfUrl = `${import.meta.env.BASE_URL}/mycv.pdf#toolbar=0&navpanes=0&scrollbar=0`;
 
   const handleTogglePreview = () => {
     setShowPreview((prev) => !prev);
@@ -32,7 +32,7 @@ const pdfUrl = `${import.meta.env.BASE_URL}/MYCV.pdf`;
           <button
             type="button"
             onClick={handleTogglePreview}
-            className="inline-flex items-center justify-center rounded-full border border-cyan-500 px-6 py-2.5 text-sm font-medium text-cyan-400 cursor-pointer hover:bg-cyan-500/10 lg:text-2xl"
+            className="inline-flex items-center justify-center rounded-full border border-cyan-500 px-6 py-2.5 text-sm font-medium cursor-pointer text-cyan-400 hover:bg-cyan-500/10 lg:text-2xl"
           >
             {showPreview ? "Close Preview" : "Preview Resume"}
           </button>
