@@ -2,9 +2,11 @@ import React, { useState } from "react";
 
 const Resume = () => {
   const [showPreview, setShowPreview] = useState(false);
+
+  // Will become /Porfolio/mycv.pdf in prod
   const pdfUrl = `${import.meta.env.BASE_URL}mycv.pdf#toolbar=0&navpanes=0&scrollbar=0`;
 
-  const togglePreview = () => setShowPreview((p) => !p);
+  const togglePreview = () => setShowPreview((prev) => !prev);
 
   return (
     <section className="w-full min-h-screen bg-slate-950 flex flex-col items-center px-4 py-10 gap-8">
