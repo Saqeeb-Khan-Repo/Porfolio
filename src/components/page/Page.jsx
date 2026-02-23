@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Resume = () => {
   const [showPreview, setShowPreview] = useState(false);
-const pdfUrl = `${import.meta.env.BASE_URL}/MYCV.pdf#toolbar=0&navpanes=0&scrollbar=0`;
+const pdfUrl = `${import.meta.env.BASE_URL}/MYCV.pdf`;
 
   const handleTogglePreview = () => {
     setShowPreview((prev) => !prev);
@@ -11,7 +11,7 @@ const pdfUrl = `${import.meta.env.BASE_URL}/MYCV.pdf#toolbar=0&navpanes=0&scroll
   return (
     <section className="w-full min-h-screen bg-slate-950 flex flex-col  items-center px-4 py-10 gap-8">
       {/* Heading */}
-      <div className="max-w-4xl w-full flex flex-col items-center mt-30 gap-4 text-slate-100 text-center">
+      <div className="max-w-4xl w-full flex flex-col items-center mt-20 gap-4 text-slate-100 text-center">
         <h1 className="font-semibold text-3xl md:text-4xl mb-5 text-cyan-500 lg:text-5xl">
           Resume
         </h1>
@@ -32,7 +32,7 @@ const pdfUrl = `${import.meta.env.BASE_URL}/MYCV.pdf#toolbar=0&navpanes=0&scroll
           <button
             type="button"
             onClick={handleTogglePreview}
-            className="inline-flex items-center justify-center rounded-full border border-cyan-500 px-6 py-2.5 text-sm font-medium text-cyan-400 hover:bg-cyan-500/10 lg:text-2xl"
+            className="inline-flex items-center justify-center rounded-full border border-cyan-500 px-6 py-2.5 text-sm font-medium text-cyan-400 cursor-pointer hover:bg-cyan-500/10 lg:text-2xl"
           >
             {showPreview ? "Close Preview" : "Preview Resume"}
           </button>
