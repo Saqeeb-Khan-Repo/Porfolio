@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import Layout from "./Layout";
 import { Analytics } from "@vercel/analytics/react";
@@ -11,7 +11,7 @@ const Contact = lazy(() => import("./components/contact/Contact"));
 const ErrorPage = lazy(() => import("./ErrorPage"));
 
 const App = () => (
-  <HashRouter>
+  <BrowserRouter>
     <Analytics />
     <Suspense
       fallback={
@@ -33,7 +33,7 @@ const App = () => (
         </Route>
       </Routes>
     </Suspense>
-  </HashRouter>
+  </BrowserRouter>
 );
 
 export default App;

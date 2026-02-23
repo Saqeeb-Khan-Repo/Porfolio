@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Resume = () => {
   const [showPreview, setShowPreview] = useState(false);
-  const pdfUrl = `${import.meta.env.BASE_URL}mycv.pdf#toolbar=0&navpanes=0&scrollbar=0`;
+  const pdfUrl = `${import.meta.env.BASE_URL}/mycv.pdf#toolbar=0&navpanes=0&scrollbar=0`;
 
   const handleTogglePreview = () => {
     setShowPreview((prev) => !prev);
