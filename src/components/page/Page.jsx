@@ -5,7 +5,7 @@ const Resume = () => {
 
   // Will become /Porfolio/mycv.pdf in prod
   const pdfUrl = `${import.meta.env.BASE_URL}mycv.pdf#toolbar=0&navpanes=0&scrollbar=0`;
-
+ 
   const togglePreview = () => setShowPreview((prev) => !prev);
 
   return (
