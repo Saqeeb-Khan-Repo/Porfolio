@@ -33,7 +33,7 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <button
-            className="inline-flex items-center justify-center rounded-md p-2 text-slate-200 hover:bg-slate-700/50 lg:hidden font-bold text-3xl transition-colors"
+            className="inline-flex items-center justify-center rounded-md p-2 text-slate-200 hover:bg-slate-700/50 lg:hidden font-bold text-3xl transition-colors cursor-pointer animate-pulse"
             aria-label={isOpen ? "Close navigation" : "Open navigation"}
             onClick={() => setIsOpen(!isOpen)}
           >

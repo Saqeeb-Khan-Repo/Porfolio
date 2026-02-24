@@ -1,5 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import {
+  FaLinkedinIn,
+  FaDiscord,
+  FaTwitter,
+  FaInstagram,
+  FaGithub,
+} from "react-icons/fa6";
+
 
 const Hero = () => {
   const [activeButton, setActiveButton] = useState(null); // "projects" | "contact" | null
@@ -29,7 +37,7 @@ const Hero = () => {
 
           <div className="mt-4 flex flex-wrap items-center justify-center gap-4 md:justify-start">
             <Link
-             to="/work"
+              to="/work"
               className="inline-flex items-center justify-center rounded-full px-5 py-2 text-sm font-semibold shadow-lg shadow-cyan-500/30 transition hover:translate-y-0.5 bg-cyan-500 text-slate-950"
             >
               View Projects
@@ -60,6 +68,71 @@ const Hero = () => {
             />
           </div>
         </section>
+
+        <div className="flex justify-center gap-4 md:gap-5 lg:hidden md:hidden mb-4 bg-slate-950 mt-10 ">
+          <a
+            href="https://www.linkedin.com/in/saqeebkhan?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+            className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-900 text-slate-100
+                           border border-slate-600/80
+                           hover:border-cyan-400 hover:text-cyan-300
+                           transition-transform duration-200 hover:-translate-y-0.5 hover:scale-105"
+          >
+            <FaLinkedinIn className="text-lg" />
+          </a>
+
+          <a
+            href="https://github.com/Saqeeb-Khan-Repo"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+            className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-900 text-slate-100
+                           border border-slate-600/80
+                           hover:border-cyan-400 hover:text-cyan-300
+                           transition-transform duration-200 hover:-translate-y-0.5 hover:scale-105"
+          >
+            <FaGithub className="text-lg" />
+          </a>
+
+          <a
+            href="https://discordapp.com/users/saqeeb281"
+            aria-label="Email"
+            className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-900 text-slate-100
+                           border border-slate-600/80
+                           hover:border-cyan-400 hover:text-cyan-300
+                           transition-transform duration-200 hover:-translate-y-0.5 hover:scale-105"
+          >
+            <FaDiscord className="text-lg" />
+          </a>
+
+          <a
+            href="https://www.instagram.com/saqeebkhan9880"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram"
+            className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-900 text-slate-100
+                           border border-slate-600/80
+                           hover:border-cyan-400 hover:text-cyan-300
+                           transition-transform duration-200 hover:-translate-y-0.5 hover:scale-105"
+          >
+            <FaInstagram className="text-lg" />
+          </a>
+
+          <a
+            href="https://twitter.com/@saqeeb281"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Twitter"
+            className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-900 text-slate-100
+                           border border-slate-600/80
+                           hover:border-cyan-400 hover:text-cyan-300
+                           transition-transform duration-200 hover:-translate-y-0.5 hover:scale-105"
+          >
+            <FaTwitter className="text-lg" />
+          </a>
+        </div>
       </div>
     </main>
   );
