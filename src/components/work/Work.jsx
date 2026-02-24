@@ -9,7 +9,7 @@ const Work = () => {
       title: "Frontend Project",
       name: "Pomodoro",
       date: "Nov – Dec 2025",
-      skill: "React.js, React-router-dom, react-icons",
+      skill: "React.js,react-icons",
       link: "https://pomodoro-iota-wine.vercel.app/#/",
       github: "https://github.com/Saqeeb-Khan-Repo/Pomodoro",
       video: "/pomodoro.mp4",
@@ -79,7 +79,7 @@ const Work = () => {
 
   return (
     <section className="w-full bg-slate-950 text-amber-50 py-16 min-h-screen">
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 md:flex-row md:items-center  p-7">
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 md:flex-row md:items-center">
         {/* Left: text / meta */}
         <div className="flex-1 space-y-4">
           <p className="text-sm md:text-2xl uppercase tracking-[0.25em] text-cyan-400 typing">
