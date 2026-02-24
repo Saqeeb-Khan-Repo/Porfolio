@@ -9,6 +9,7 @@ import {
 const Footer = () => {
   return (
     <footer className="w-full bg-slate-950 border-t border-slate-800/80 py-6 text-center text-xs md:text-sm text-slate-400">
+    
       {/* Social icons */}
       <div className="flex justify-center gap-4 md:gap-5 mb-4">
         <a
@@ -86,5 +87,6 @@ const Footer = () => {
     </footer>
   );
 };
+
 
 export default Footer;

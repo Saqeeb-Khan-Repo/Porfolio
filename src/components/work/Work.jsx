@@ -8,41 +8,41 @@ const Work = () => {
       nums: "01",
       title: "Frontend Project",
       name: "Pomodoro",
-      date: "Jan – Feb 2026",
-      skill: "React.js, Tailwind CSS",
+      date: "Nov – Dec 2025",
+      skill: "React.js, React-router-dom, react-icons",
       link: "https://pomodoro-iota-wine.vercel.app/#/",
       github: "https://github.com/Saqeeb-Khan-Repo/Pomodoro",
-      img: "/pomo.png",
+      video: "/pomodoro.mp4",
     },
     {
       nums: "02",
       title: "Full Stack Project",
       name: "Task Manager",
-      date: "Jan – Feb 2026",
-      skill: "React.js, Tailwind CSS",
+      date: "Dec 2026",
+      skill: "MERN,Authentication",
       link: "https://taskflos.netlify.app/#/",
       github: "https://github.com/Saqeeb-Khan-Repo/Task-manager",
-      img: "/task.png",
+      video: "/taskflow.mp4",
     },
     {
       nums: "03",
       title: "Full Stack Project",
       name: "Dribbble Clone",
       date: "Jan – Feb 2026",
-      skill: "MERN, Cloudinary",
+      skill: "MERN, Pexels API , Authentication , jwt , bycrypt",
       link: "https://dribbleclone-mu.vercel.app/#/",
       github: "https://github.com/Saqeeb-Khan-Repo/Dribble",
-      img: "/dribble.png",
+      video: "/dribble.mp4",
     },
     {
       nums: "04",
       title: "Frontend Project",
       name: "Nykaa Clone",
       date: "Jan – Feb 2026",
-      skill: "React.js, Tailwind CSS",
+      skill: "React.js, Products API",
       link: "https://nykaa-pearl.vercel.app/#",
       github: "https://github.com/Saqeeb-Khan-Repo/NYKAA",
-      img: "/nykaa (1).png",
+      video: "/nykaa.mp4",
     },
     {
       nums: "05",
@@ -52,7 +52,7 @@ const Work = () => {
       skill: "React.js, Weather API",
       link: "https://saqeeb-khan-repo.github.io/Weather-React/",
       github: "https://github.com/Saqeeb-Khan-Repo/Weather-React",
-      img: "/weather.png",
+      video: "/weather.mp4",
     },
     {
       nums: "06",
@@ -60,9 +60,9 @@ const Work = () => {
       name: "Youtube Clone",
       date: "Jan – Feb 2026",
       skill: "React.js, Rapid API",
-      link: "https://tubeplex.netlify.app/",
+      link: "https://youtube-olive-beta.vercel.app/",
       github: "https://github.com/Saqeeb-Khan-Repo/Youtube",
-      img: "/yt.png",
+      video: "/yt.mp4",
     },
   ];
 
@@ -79,11 +79,11 @@ const Work = () => {
 
   return (
     <section className="w-full bg-slate-950 text-amber-50 py-16 min-h-screen">
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 md:flex-row md:items-center">
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 md:flex-row md:items-center  p-7">
         {/* Left: text / meta */}
         <div className="flex-1 space-y-4">
-          <p className="text-sm uppercase tracking-[0.25em] text-cyan-400">
-            Selected work
+          <p className="text-sm md:text-2xl uppercase tracking-[0.25em] text-cyan-400 typing">
+            My work's
           </p>
           <h2 className="text-3xl font-semibold sm:text-4xl">{current.name}</h2>
 
@@ -147,22 +147,26 @@ const Work = () => {
           </div>
         </div>
 
-        {/* Right: image */}
-        <div className="flex-1">
-          <div className="aspect-video w-full overflow-hidden rounded-2xl border border-white/5 bg-slate-900/60">
-            {current.img ? (
-              <img
-                src={current.img}
-                alt={current.name}
-                className="h-full w-full object-cover"
-                loading="lazy"
-              />
-            ) : (
-              <div className="flex h-full w-full items-center justify-center text-sm text-slate-500">
-                Project screenshot coming soon
-              </div>
-            )}
-          </div>
+        <div className="aspect-video w-full overflow-hidden rounded-2xl border border-white/5 bg-slate-900/60">
+          {current.video ? (
+            <video
+              src={current.video}
+              className="h-full w-full object-cover"
+              muted
+              autoPlay
+              loop
+              playsInline
+              onError={(e) => {
+                console.error("Video load error:", e);
+                e.target.style.display = "none";
+              }}
+              preload="metadata"
+            />
+          ) : (
+            <div className="flex h-full w-full items-center justify-center text-sm text-slate-500">
+              Project preview coming soon
+            </div>
+          )}
         </div>
       </div>
     </section>

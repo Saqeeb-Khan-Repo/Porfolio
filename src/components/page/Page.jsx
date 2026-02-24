@@ -10,7 +10,8 @@ const Resume = () => {
 
   return (
     <section className="w-full min-h-screen bg-slate-950 flex flex-col items-center px-4 py-10 gap-8">
-      <div className="max-w-4xl w-full flex flex-col items-center gap-4 text-slate-100 text-center">
+      <div className="max-w-4xl w-full flex flex-col items-center gap-4 text-slate-100 text-center 
+      bg-slate-900 rounded-3xl p-10 ">
         <h1 className="font-semibold text-3xl lg:text-4xl text-cyan-500">
           Resume
         </h1>

@@ -12,8 +12,8 @@ const Contact = () => {
       {/* Wrapper */}
       <div className="w-full max-w-2xl flex flex-col items-center gap-6">
         {/* Heading */}
-        <div className="text-center space-y-2">
-          <p className="text-xs uppercase tracking-[0.3em] text-cyan-300/80">
+        <div className="text-center space-y-4">
+          <p className="text-sm uppercase tracking-[0.4em] text-cyan-300/80">
             Get in touch
           </p>
           <h1 className="font-semibold font-serif text-3xl lg:text-5xl text-cyan-50">
@@ -27,7 +27,7 @@ const Contact = () => {
         {/* Form card - glassmorphism */}
         <form
           className="w-full bg-slate-900/60 backdrop-blur-xl border border-white/10
-                     rounded-2xl p-6 md:p-8 space-y-5 shadow-[0_18px_60px_rgba(15,23,42,0.75)]"
+                     rounded-4xl p-7 lg:p-6 md:p-8 space-y-10 shadow-[0_18px_60px_rgba(15,23,42,0.75)]"
         >
           {/* Name */}
           <div className="space-y-1">
@@ -102,13 +102,13 @@ const Contact = () => {
           </div>
 
           {/* Footer row */}
-          <div className="flex flex-col md:flex-row md:items-center gap-3 pt-2">
+          <div className="flex flex-col  md:items-center gap-3 pt-2">
             <button
               type="submit"
               className="inline-flex items-center justify-center gap-2
                          rounded-full bg-linear-to-r from-cyan-400 via-sky-400 to-emerald-400
                          px-6 py-2.5 text-sm md:text-sm font-semibold text-slate-950
-                         shadow-lg shadow-cyan-500/30
+                         shadow-lg shadow-cyan-500/30 lg:w-full
                          hover:shadow-cyan-400/40 hover:brightness-110
                          active:scale-[0.98]
                          transition"

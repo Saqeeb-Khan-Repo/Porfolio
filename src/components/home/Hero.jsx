@@ -14,11 +14,11 @@ const Hero = () => {
 
   return (
     <main className="w-full bg-slate-950 text-slate-100 h-full">
-      <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col items-center justify-center px-4 py-8 md:flex-row md:px-8 lg:px-16 lg:py-4">
+      <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col items-center justify-center px-4 py-4 md:flex-row md:px-8 lg:px-16 lg:py-2 ">
         {/* Left: text */}
         <section className="flex w-full flex-col gap-4 text-center md:w-1/2  md:pr-6 md:text-left">
-          <div className="space-y-2">
-            <span className="text-sm font-medium uppercase tracking-normal  text-cyan-400 lg:text-2xl typing">
+          <div className="space-y-2 ">
+            <span className="text-sm font-medium uppercase tracking-normal  text-cyan-400 lg:text-3xl typing">
               Frontend Developer
             </span>
 
@@ -38,7 +38,7 @@ const Hero = () => {
           <div className="mt-4 flex flex-wrap items-center justify-center gap-4 md:justify-start">
             <Link
               to="/work"
-              className="inline-flex items-center justify-center rounded-full px-5 py-2 text-sm font-semibold shadow-lg shadow-cyan-500/30 transition hover:translate-y-0.5 bg-cyan-500 text-slate-950"
+              className="inline-flex items-center justify-center rounded-full px-5 py-2 text-sm    font-semibold shadow-lg shadow-cyan-500/30 transition hover:translate-y-0.5 bg-cyan-500 text-slate-950 border-2 border-cyan-500"
             >
               View Projects
             </Link>
