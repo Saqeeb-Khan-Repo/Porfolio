@@ -32,7 +32,7 @@ const Work = () => {
       skill: "MERN, Pexels API , Authentication , jwt , bycrypt",
       link: "https://dribbleclone-mu.vercel.app/#/",
       github: "https://github.com/Saqeeb-Khan-Repo/Dribble",
-      video: "/dribble.mp4",
+      video: "/drib.mp4",
     },
     {
       nums: "04",
