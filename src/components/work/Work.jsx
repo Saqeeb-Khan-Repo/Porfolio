@@ -156,11 +156,11 @@ const Work = () => {
               autoPlay
               loop
               playsInline
+              controls
               onError={(e) => {
                 console.error("Video load error:", e);
                 e.target.style.display = "none";
               }}
-              preload="metadata"
             />
           ) : (
             <div className="flex h-full w-full items-center justify-center text-sm text-slate-500">
