@@ -113,7 +113,6 @@ const Contact = () => {
               className="w-full border border-slate-600 bg-slate-900/60 rounded-lg px-3 py-2 text-sm outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 resize-none"
             />
           </div>
-
           <div className="md:col-span-2 flex flex-col md:flex-row items-center justify-between gap-3 mt-2">
             <button
               type="submit"
