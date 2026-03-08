@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
 const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
+const TEMPLATE_AUTO = import.meta.env.VITE_TEMPLATE_AUTO;
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -15,7 +16,7 @@ const Contact = () => {
     setStatus("Sending...");
 
     emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, {
+      .sendForm(SERVICE_ID, TEMPLATE_ID, TEMPLATE_AUTO, formRef.current, {
         publicKey: PUBLIC_KEY,
       })
       .then(
@@ -122,7 +123,9 @@ const Contact = () => {
             </button>
 
             {status && (
-              <p className={`text-xs md:text-sm  md:text-right ${status.includes("successfully") ? "text-green-400" : "text-cyan-500"} text-center mt-2 md:mt-0 bg-slate-700 p-2 font-bold `}>
+              <p
+                className={`text-xs md:text-sm  md:text-right ${status.includes("successfully") ? "text-green-400" : "text-cyan-500"} text-center mt-2 md:mt-0 bg-slate-700 p-2 font-bold `}
+              >
                 {status}
               </p>
             )}
