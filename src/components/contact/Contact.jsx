@@ -1,131 +1,136 @@
+// Contact.jsx
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
-import { CiLocationArrow1 } from "react-icons/ci";
+const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
 
 const Contact = () => {
-  return (
-    <div className="min-h-screen w-full bg-slate-950 flex items-center justify-center px-4">
-      {/* Background gradient blur blob */}
-      <div className="pointer-events-none fixed inset-0 -z-10">
-        <div className="absolute inset-0 bg-linear-to-br from-cyan-500/20 via-sky-500/10 to-fuchsia-500/20 blur-3xl" />
-      </div>
+  const formRef = useRef(null);
+  const [status, setStatus] = useState("");
 
-      {/* Wrapper */}
-      <div className="w-full max-w-2xl flex flex-col items-center gap-6">
-        {/* Heading */}
-        <div className="text-center space-y-4">
-          <p className="text-sm uppercase tracking-[0.4em] text-cyan-300/80">
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    emailjs
+      .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, {
+        publicKey: PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          setStatus("Message sent successfully!");
+          formRef.current.reset();
+        },
+        (error) => {
+          console.error(error);
+          setStatus("Failed to send message. Please try again.");
+        },
+      );
+  };
+
+  return (
+    <section
+      id="contact"
+      className="min-h-screen bg-slate-900 text-amber-50 flex items-center justify-center px-4 py-10"
+    >
+      <div className="w-full max-w-3xl bg-slate-800/70 border border-slate-700 rounded-2xl shadow-xl p-6 md:p-8">
+        <div className="mb-6 text-center">
+          <p className="text-sm uppercase tracking-[0.2em] text-cyan-400">
             Get in touch
           </p>
-          <h1 className="font-semibold font-serif text-3xl lg:text-5xl text-cyan-50">
-            Liked my work?
-          </h1>
-          <p className="text-sm text-cyan-100/80 max-w-md mx-auto">
-            Drop a message and I&apos;ll get back to you as soon as possible.
+          <h2 className="text-2xl md:text-4xl font-bold text-cyan-500 mt-2">
+            Contact Me
+          </h2>
+          <p className="mt-2 text-sm md:text-base text-slate-300">
+            Have a project, question, or just want to say hi? Drop a message and
+            I’ll get back to you.
           </p>
         </div>
 
-        {/* Form card - glassmorphism */}
         <form
-          className="w-full bg-slate-900/60 backdrop-blur-xl border border-white/10
-                     rounded-4xl p-7 lg:p-6 md:p-8 space-y-10 shadow-[0_18px_60px_rgba(15,23,42,0.75)]"
+          ref={formRef}
+          onSubmit={sendEmail}
+          className="space-y-4 grid grid-cols-1 md:grid-cols-2 md:gap-4"
         >
-          {/* Name */}
-          <div className="space-y-1">
-            <label htmlFor="name" className="text-sm text-slate-200">
-              Name<span className="text-red-400">*</span>
+          <div className="md:col-span-1">
+            <label
+              className="block mb-1 text-xs font-medium text-slate-300"
+              htmlFor="name"
+            >
+              Name
             </label>
-            <div className="relative">
-              <input
-                id="name"
-                type="text"
-                required
-                className="w-full rounded-xl border border-slate-700/70 bg-slate-950/60
-                           pl-8 pr-3 py-2.5 text-sm text-slate-100
-                           outline-none transition
-                           focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/40"
-                placeholder="John Doe"
-              />
-            </div>
-          </div>
-
-          {/* Email */}
-          <div className="space-y-1">
-            <label htmlFor="email" className="text-sm text-slate-200">
-              Email<span className="text-red-400">*</span>
-            </label>
-            <div className="relative">
-              <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center text-slate-400">
-                <svg
-                  className="h-4 w-4"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3 8l8.217 4.885a2 2 0 0 0 2.066.003L21 8m-2-3H5a2 2 0 0 0-2 2v10
-                       a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z"
-                  />
-                </svg>
-              </span>
-              <input
-                id="email"
-                type="email"
-                required
-                className="w-full rounded-xl border border-slate-700/70 bg-slate-950/60
-                           pl-9 pr-3 py-2.5 text-sm text-slate-100
-                           outline-none transition
-                           focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/40"
-                placeholder="you@example.com"
-              />
-            </div>
-          </div>
-
-          {/* Message */}
-          <div className="space-y-1">
-            <label htmlFor="message" className="text-sm text-slate-200">
-              Message<span className="text-red-400">*</span>
-            </label>
-            
-            <textarea
-              id="message"
-              rows={4}
+            <input
+              type="text"
+              name="name"
               required
-              className="w-full rounded-xl border border-slate-700/70 bg-slate-950/60
-                         px-3 py-2.5 text-sm text-slate-100
-                         outline-none resize-none transition
-                         focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/40"
-              placeholder="Tell me about your project or idea..."
+              className="w-full border border-slate-600 bg-slate-900/60 rounded-lg px-3 py-2 text-sm outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
             />
           </div>
 
-          {/* Footer row */}
-          <div className="flex flex-col  md:items-center gap-3 pt-2">
+          <div className="md:col-span-1">
+            <label
+              className="block mb-1 text-xs font-medium text-slate-300"
+              htmlFor="email"
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              required
+              className="w-full border border-slate-600 bg-slate-900/60 rounded-lg px-3 py-2 text-sm outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
+            />
+          </div>
+
+          <div className="md:col-span-2">
+            <label
+              className="block mb-1 text-xs font-medium text-slate-300"
+              htmlFor="subject"
+            >
+              Subject
+            </label>
+            <input
+              type="text"
+              name="subject"
+              required
+              className="w-full border border-slate-600 bg-slate-900/60 rounded-lg px-3 py-2 text-sm outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
+            />
+          </div>
+
+          <div className="md:col-span-2">
+            <label
+              className="block mb-1 text-xs font-medium text-slate-300"
+              htmlFor="message"
+            >
+              Message
+            </label>
+            <textarea
+              name="message"
+              rows="5"
+              required
+              className="w-full border border-slate-600 bg-slate-900/60 rounded-lg px-3 py-2 text-sm outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 resize-none"
+            />
+          </div>
+
+          <div className="md:col-span-2 flex flex-col md:flex-row items-center justify-between gap-3 mt-2">
             <button
               type="submit"
-              className="inline-flex items-center justify-center gap-2
-                         rounded-full bg-linear-to-r from-cyan-400 via-sky-400 to-emerald-400
-                         px-6 py-2.5 text-sm md:text-sm font-semibold text-slate-950
-                         shadow-lg shadow-cyan-500/30 lg:w-full
-                         hover:shadow-cyan-400/40 hover:brightness-110
-                         active:scale-[0.98]
-                         transition"
+              className="inline-flex items-center justify-center px-6 py-2.5 rounded-lg bg-cyan-500 text-slate-900 font-semibold text-sm hover:bg-cyan-400 transition-colors w-full md:w-auto"
             >
-              Send message
-              <span className="text-base">
-                <CiLocationArrow1/>
-              </span>
+              Send Message
             </button>
 
-            <p className="text-xs text-slate-400 md:ml-2">
-              I usually reply within 24 hours.
-            </p>
+            {status && (
+              <p className={`text-xs md:text-sm  md:text-right ${status.includes("successfully") ? "text-green-400" : "text-cyan-500"} text-center mt-2 md:mt-0 bg-slate-700 p-2 font-bold `}>
+                {status}
+              </p>
+            )}
           </div>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 
