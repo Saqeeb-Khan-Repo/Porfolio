@@ -156,7 +156,6 @@ const Work = () => {
               autoPlay
               loop
               playsInline
-              controls
               onError={(e) => {
                 console.error("Video load error:", e);
                 e.target.style.display = "none";
