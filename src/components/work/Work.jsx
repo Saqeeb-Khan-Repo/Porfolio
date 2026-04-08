@@ -65,15 +65,19 @@ const Work = () => {
       video: "/yt.mp4",
     },
   ];
-
+// State for current project index carousel
   const [currentIndex, setCurrentIndex] = useState(0);
-  const current = details[currentIndex];
+  const total = details.length;
+  const hasItems = total > 0;
+  const current = hasItems ? details[currentIndex] : null;
 
   const handlePrev = () => {
+    if (!hasItems) return;
     setCurrentIndex((prev) => (prev === 0 ? details.length - 1 : prev - 1));
   };
 
   const handleNext = () => {
+    if (!hasItems) return;
     setCurrentIndex((prev) => (prev === details.length - 1 ? 0 : prev + 1));
   };
 
