@@ -6,15 +6,8 @@ import {
   FaSitemap,
   FaCubes,
   FaDatabase,
+  FaVial,
 } from "react-icons/fa";
-
-import {
-  SiDotnet,
-  SiMicrosoftsqlserver,
-  SiXunit,
-} from "react-icons/si";
-
-import { TbApi } from "react-icons/tb";
 
 const Skills = () => {
   const skills = [
@@ -24,7 +17,7 @@ const Skills = () => {
     },
     {
       name: ".NET Core",
-      icon: <SiDotnet className="text-purple-500" />,
+      icon: <FaServer className="text-purple-500" />,
     },
     {
       name: "ASP.NET Core MVC",
@@ -32,7 +25,7 @@ const Skills = () => {
     },
     {
       name: "Web API",
-      icon: <TbApi className="text-cyan-400" />,
+      icon: <FaCode className="text-cyan-400" />,
     },
     {
       name: "MVC Architecture",
@@ -48,11 +41,11 @@ const Skills = () => {
     },
     {
       name: "SQL Server",
-      icon: <SiMicrosoftsqlserver className="text-red-500" />,
+      icon: <FaDatabase className="text-red-500" />,
     },
     {
       name: "xUnit Testing",
-      icon: <SiXunit className="text-green-400" />,
+      icon: <FaVial className="text-green-400" />,
     },
     {
       name: "React.js",
