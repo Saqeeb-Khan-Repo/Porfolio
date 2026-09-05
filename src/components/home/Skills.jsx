@@ -1,23 +1,65 @@
-import { FaCss3, FaHtml5, FaNodeJs, FaReact } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io5";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { SiExpress, SiMongodb } from "react-icons/si";
+import {
+  FaHtml5,
+  FaCss3,
+  FaReact,
+  FaGitAlt,
+} from "react-icons/fa";
+import {
+  SiDotnet,
+  SiMicrosoftsqlserver,
+  SiEntityframework,
+  SiJavascript,
+  SiXunit,
+} from "react-icons/si";
+import { TbApi } from "react-icons/tb";
 
 const Skills = () => {
   const skills = [
-    { name: "React.js", icon: <FaReact className="text-sky-400" /> },
-    { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
-    { name: "Express.js", icon: <SiExpress className="text-slate-300" /> },
-    { name: "MongoDB", icon: <SiMongodb className="text-emerald-500" /> },
+    { name: "C#", icon: <SiDotnet className="text-purple-400" /> },
+    { name: ".NET", icon: <SiDotnet className="text-purple-500" /> },
+    {
+      name: "ASP.NET Core",
+      icon: <SiDotnet className="text-indigo-400" />,
+    },
+    {
+      name: "Web API",
+      icon: <TbApi className="text-cyan-400" />,
+    },
+    {
+      name: "Entity Framework Core",
+      icon: <SiEntityframework className="text-purple-400" />,
+    },
+    {
+      name: "SQL Server",
+      icon: <SiMicrosoftsqlserver className="text-red-500" />,
+    },
+    {
+      name: "LINQ",
+      icon: <SiDotnet className="text-blue-400" />,
+    },
+    {
+      name: "xUnit",
+      icon: <SiXunit className="text-green-400" />,
+    },
+    {
+      name: "React.js",
+      icon: <FaReact className="text-sky-400" />,
+    },
     {
       name: "JavaScript",
-      icon: <IoLogoJavascript className="text-yellow-400" />,
+      icon: <SiJavascript className="text-yellow-400" />,
     },
-    { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
-    { name: "CSS3", icon: <FaCss3 className="text-blue-400" /> },
     {
-      name: "Tailwind CSS",
-      icon: <RiTailwindCssFill className="text-cyan-400" />,
+      name: "HTML5",
+      icon: <FaHtml5 className="text-orange-500" />,
+    },
+    {
+      name: "CSS3",
+      icon: <FaCss3 className="text-blue-400" />,
+    },
+    {
+      name: "Git & GitHub",
+      icon: <FaGitAlt className="text-orange-500" />,
     },
   ];
 
@@ -29,9 +71,10 @@ const Skills = () => {
           <h2 className="inline-block border-b-2 border-cyan-500 pb-1 text-2xl font-semibold uppercase tracking-[0.2em] text-cyan-400 sm:text-3xl lg:text-4xl mb-5">
             Skills
           </h2>
+
           <p className="mt-3 max-w-xl text-sm text-slate-400 sm:text-base">
-            A snapshot of the technologies I use to build full‑stack,
-            production‑ready web applications.
+            Technologies and tools I use to build reliable, scalable, and
+            maintainable web applications and RESTful APIs.
           </p>
         </div>
 
@@ -45,6 +88,7 @@ const Skills = () => {
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900/80 text-2xl transition group-hover:scale-110">
                 {item.icon}
               </div>
+
               <p className="text-xs font-medium uppercase tracking-wide text-slate-200 sm:text-sm">
                 {item.name}
               </p>
