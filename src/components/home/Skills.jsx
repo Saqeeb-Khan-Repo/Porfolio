@@ -5,12 +5,12 @@ import {
   FaServer,
   FaSitemap,
   FaCubes,
+  FaDatabase,
 } from "react-icons/fa";
 
 import {
   SiDotnet,
   SiMicrosoftsqlserver,
-  SiEntityframework,
   SiXunit,
 } from "react-icons/si";
 
@@ -44,7 +44,7 @@ const Skills = () => {
     },
     {
       name: "Entity Framework Core",
-      icon: <SiEntityframework className="text-purple-400" />,
+      icon: <FaDatabase className="text-purple-400" />,
     },
     {
       name: "SQL Server",
