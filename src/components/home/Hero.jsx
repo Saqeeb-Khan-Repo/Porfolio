@@ -8,7 +8,6 @@ import {
   FaGithub,
 } from "react-icons/fa6";
 
-
 const Hero = () => {
   const [activeButton, setActiveButton] = useState(null); // "projects" | "contact" | null
 
@@ -19,7 +18,7 @@ const Hero = () => {
         <section className="flex w-full flex-col gap-4 text-center md:w-1/2  md:pr-6 md:text-left">
           <div className="space-y-2 ">
             <span className="text-sm font-medium uppercase tracking-normal  text-cyan-400 lg:text-3xl typing">
-              Frontend Developer
+              Software Engineer
             </span>
 
             <h1 className="text-4xl font-semibold leading-tight sm:text-5xl xl:text-6xl">
@@ -30,9 +29,10 @@ const Hero = () => {
           </div>
 
           <p className="mx-auto max-w-xl text-sm text-slate-300 sm:text-base md:mx-0">
-            I build fast, responsive, and modern web experiences using React,
-            Node.js, and Tailwind CSS. I love crafting clean UIs and smooth
-            animations that feel delightful to use.
+            I&apos;m a B.E. graduate in Information Science & Engineering with
+            knowledge of C#, .NET, ASP.NET Core, MVC, Web API, Entity Framework
+            Core, SQL Server, LINQ, and xUnit. I also have experience with
+            React, JavaScript, HTML, and CSS.
           </p>
 
           <div className="mt-4 flex flex-wrap items-center justify-center gap-4 md:justify-start">
@@ -61,10 +61,11 @@ const Hero = () => {
         <section className="mt-8 flex w-full items-center justify-center md:mt-0 md:w-1/2 md:pl-6">
           <div className="relative">
             <div className="absolute -inset-4 rounded-full bg-cyan-500/20 blur-3xl" />
+
             <img
               className="relative h-40 w-40 rounded-full border border-cyan-500 object-cover shadow-xl shadow-cyan-500/50 sm:h-48 sm:w-48 md:h-56 md:w-56 lg:h-64 lg:w-64"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlie4MsQ9pJSSKY7DoEpxn3uBAq-rT7in1sA&s"
-              alt="Khan"
+              alt="Saqeeb Khan"
             />
           </div>
         </section>
