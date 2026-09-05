@@ -1,25 +1,34 @@
 import {
   FaReact,
   FaGitAlt,
+  FaCode,
+  FaServer,
+  FaSitemap,
   FaCubes,
-  FaLayerGroup,
 } from "react-icons/fa";
+
 import {
   SiDotnet,
   SiMicrosoftsqlserver,
   SiEntityframework,
   SiXunit,
-  SiCsharp,
 } from "react-icons/si";
+
 import { TbApi } from "react-icons/tb";
 
 const Skills = () => {
   const skills = [
-    { name: "C#", icon: <SiCsharp className="text-purple-400" /> },
-    { name: ".NET Core", icon: <SiDotnet className="text-purple-500" /> },
+    {
+      name: "C#",
+      icon: <FaCode className="text-purple-400" />,
+    },
+    {
+      name: ".NET Core",
+      icon: <SiDotnet className="text-purple-500" />,
+    },
     {
       name: "ASP.NET Core MVC",
-      icon: <SiDotnet className="text-indigo-400" />,
+      icon: <FaServer className="text-indigo-400" />,
     },
     {
       name: "Web API",
@@ -27,7 +36,7 @@ const Skills = () => {
     },
     {
       name: "MVC Architecture",
-      icon: <FaLayerGroup className="text-blue-400" />,
+      icon: <FaSitemap className="text-blue-400" />,
     },
     {
       name: "SOLID Principles",
