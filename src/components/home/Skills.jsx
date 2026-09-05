@@ -1,29 +1,37 @@
 import {
-  FaHtml5,
-  FaCss3,
   FaReact,
   FaGitAlt,
+  FaCubes,
+  FaLayerGroup,
 } from "react-icons/fa";
 import {
   SiDotnet,
   SiMicrosoftsqlserver,
   SiEntityframework,
-  SiJavascript,
   SiXunit,
+  SiCsharp,
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 
 const Skills = () => {
   const skills = [
-    { name: "C#", icon: <SiDotnet className="text-purple-400" /> },
-    { name: ".NET", icon: <SiDotnet className="text-purple-500" /> },
+    { name: "C#", icon: <SiCsharp className="text-purple-400" /> },
+    { name: ".NET Core", icon: <SiDotnet className="text-purple-500" /> },
     {
-      name: "ASP.NET Core",
+      name: "ASP.NET Core MVC",
       icon: <SiDotnet className="text-indigo-400" />,
     },
     {
       name: "Web API",
       icon: <TbApi className="text-cyan-400" />,
+    },
+    {
+      name: "MVC Architecture",
+      icon: <FaLayerGroup className="text-blue-400" />,
+    },
+    {
+      name: "SOLID Principles",
+      icon: <FaCubes className="text-green-400" />,
     },
     {
       name: "Entity Framework Core",
@@ -34,28 +42,12 @@ const Skills = () => {
       icon: <SiMicrosoftsqlserver className="text-red-500" />,
     },
     {
-      name: "LINQ",
-      icon: <SiDotnet className="text-blue-400" />,
-    },
-    {
-      name: "xUnit",
+      name: "xUnit Testing",
       icon: <SiXunit className="text-green-400" />,
     },
     {
       name: "React.js",
       icon: <FaReact className="text-sky-400" />,
-    },
-    {
-      name: "JavaScript",
-      icon: <SiJavascript className="text-yellow-400" />,
-    },
-    {
-      name: "HTML5",
-      icon: <FaHtml5 className="text-orange-500" />,
-    },
-    {
-      name: "CSS3",
-      icon: <FaCss3 className="text-blue-400" />,
     },
     {
       name: "Git & GitHub",
@@ -73,7 +65,7 @@ const Skills = () => {
           </h2>
 
           <p className="mt-3 max-w-xl text-sm text-slate-400 sm:text-base">
-            Technologies and tools I use to build reliable, scalable, and
+            Technologies and principles I use to build reliable, scalable, and
             maintainable web applications and RESTful APIs.
           </p>
         </div>
